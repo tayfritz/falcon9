@@ -21,7 +21,10 @@ let minutes = Math.floor(timeLeft % (1000 * 60 * 60) / (1000 * 60));
 let seconds = Math.floor(timeLeft % (1000 * 60) / 1000);
 
 // Display the outlet to users
-
+document.getElementById("days").innerHTML = days + "days "
+document.getElementById("hours").innerHTML = hours + "hours " 
+document.getElementById("mins").innerHTML = minutes + "mins " 
+document.getElementById("secs").innerHTML = seconds + "secs "
 
 
 
