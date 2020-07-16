@@ -16,9 +16,9 @@ let timeLeft = countdownDate - now;
 
 // Calculate the days, hours, minutes, and seconds left
 let days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-let hours = Math.floor(timeLeft % (1000 * 60 * 60) / (1000 * 60 * 60));
-let minutes = Math.floor(timeLeft % (1000 * 60 * 60) / (1000 * 60));
-let seconds = Math.floor(timeLeft % (1000 * 60) / 1000);
+let hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+let minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+let seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
 
 // Display the outlet to users
 document.getElementById("days").innerHTML = days + "days "
@@ -27,7 +27,7 @@ document.getElementById("mins").innerHTML = minutes + "mins "
 document.getElementById("secs").innerHTML = seconds + "secs "
 
 // Display a message when the countdown is over
-if (timeleft < 0) {
+if (timeLeft < 0) {
     clearInterval(myfunc);
     document.getElementById("days").innerHTML = ""
     document.getElementById("hours").innerHTML = "" 
