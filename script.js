@@ -26,7 +26,14 @@ document.getElementById("hours").innerHTML = hours + "hours "
 document.getElementById("mins").innerHTML = minutes + "mins " 
 document.getElementById("secs").innerHTML = seconds + "secs "
 
-
-
+// Display a message when the countdown is over
+if (timeleft < 0) {
+    clearInterval(myfunc);
+    document.getElementById("days").innerHTML = ""
+    document.getElementById("hours").innerHTML = "" 
+    document.getElementById("mins").innerHTML = ""
+    document.getElementById("secs").innerHTML = ""
+    document.getElementById("end").innerHTML = "TIMES UP!!";
+}
 
 }, 1000)
